@@ -2,7 +2,7 @@ deploy:
   provider: heroku
   api-key:
     secure: 20878560-a77b-4dc9-ab2b-b166a0d755d5
+  app: floating-tor-10846
 language: java
 sudo: false
 script: mvn clean verify
-                        
