@@ -13,8 +13,8 @@ public class IndexController {
 
     @RequestMapping(value = "/", method={RequestMethod.GET})
     @ResponseBody
-    String hello(HttpServletRequest request, @RequestParam(value = "name", required = false) String name) {
-        if (name==null)
+    public String hello(HttpServletRequest request, @RequestParam(value = "name", required = false) String name) {
+        if (name==null||request == null)
             return "Hello world!";
         else
             return "Hello "+ request.getParameter("name")+"!";
